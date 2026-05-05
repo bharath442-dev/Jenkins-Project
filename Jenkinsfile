@@ -8,6 +8,13 @@ pipeline {
             }
         }
 
+
+        stage('Check GCC') {
+    steps {
+        bat 'where gcc'
+    }
+}
+
     stage('Build') {
     steps {
         bat '''
