@@ -8,16 +8,17 @@ pipeline {
             }
         }
 
-        stage('Build') {
-            steps {
-                bat '''
-                mkdir build
-                cd build
-                cmake ..
-                cmake --build .
-                '''
-            }
-        }
+    stage('Build') {
+    steps {
+        bat '''
+        if exist build rmdir /s /q build
+        mkdir build
+        cd build
+        cmake ..
+        cmake --build .
+        '''
+    }
+}
 
         stage('Run') {
             steps {
