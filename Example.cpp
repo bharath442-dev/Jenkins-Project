@@ -1,2 +1,6 @@
 #include "Example.hpp"
-hello
+#include <iostream>
+
+void hello() {
+    std::cout << "Hello, World!" << std::endl;
+}
