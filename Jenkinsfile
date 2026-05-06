@@ -15,6 +15,7 @@ pipeline {
     }
 }
 
+
     stage('Build') {
     steps {
         bat '''
@@ -26,6 +27,7 @@ pipeline {
         '''
     }
 }
+
 
         stage('Run') {
             steps {
